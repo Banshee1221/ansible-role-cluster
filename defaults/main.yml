@@ -1,0 +1,10 @@
+---
+
+# Directory checks
+tools_dir: "/tools"
+
+# Softare configuration
+apt_repos_singulairty:
+  - "deb http://neurodeb.pirsquared.org data main contrib non-free"
+  - "deb http://neurodeb.pirsquared.org {{ ansible_distribution_release }} main contrib non-free"
+apt_key_singularity: "0xA5D32F012649A5A9"

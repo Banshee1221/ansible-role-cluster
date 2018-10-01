@@ -1,0 +1,12 @@
+---
+
+- name: Do basic cluster checks
+  include_tasks: 01_directory_checks.yml
+  when: headnode is defined
+
+- name: Do software checks
+  include_tasks: 02_software_checks.yml
+
+- name: Tune Linux for performance
+  include_tasks: 03_perf_tweaks.yml
+  when: headnode is not defined
