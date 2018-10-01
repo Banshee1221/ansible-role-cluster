@@ -1,0 +1,11 @@
+---
+
+- name: Add Singularity repo key
+  apt_key:
+    keyserver: hkp://pool.sks-keyservers.net:80
+    id: "{{ apt_key_singularity }}"
+
+- name: Check Singulairty repo present
+  apt_repository:
+    repo: "{{ apt_repos_singulairty }}"
+    state: present
