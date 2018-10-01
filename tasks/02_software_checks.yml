@@ -1,5 +1,7 @@
 ---
 
+# Singularity
+
 - name: Add Singularity repo key
   apt_key:
     keyserver: hkp://pool.sks-keyservers.net:80
@@ -10,3 +12,9 @@
     repo: "{{ item }}"
     state: present
   loop: "{{ apt_repos_singulairty }}"
+
+- name: Install Singularity runtime
+  apt:
+    name: singularity-container
+    update_cache: yes
+    state: present
