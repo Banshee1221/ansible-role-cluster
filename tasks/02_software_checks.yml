@@ -18,3 +18,10 @@
     name: singularity-container
     update_cache: yes
     state: present
+
+- name: Ensure hostfs is turned on
+  lineinfile:
+    path: "/etc/singularity/singularity.conf"
+    regexp: '^mount hostfs ='
+    line: "mount hostfs = yes"
+    state: present
