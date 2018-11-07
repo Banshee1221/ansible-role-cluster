@@ -30,7 +30,16 @@ In it's currect state this role will set up:
 
 ### Inventory
 
-The `headnode` variable must be defined and set to true on the machines that will act as the head/login node. The role will fail if this is not set.
+The `headnode` variable must be defined and set to true on the machines that will act as the head/login node. The role will fail if this is not set. Following is an example of a host group:
+
+```ini
+[cluster]
+login.sanbi.ac.za headnode=True
+node01.sanbi.ac.za
+node02.sanbi.ac.za
+node03.sanbi.ac.za
+node04.sanbi.ac.za
+```
 
 ## Usage
 
