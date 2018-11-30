@@ -7,7 +7,7 @@
     state: present
     sysctl_file: /etc/sysctl.d/99-sysctl.conf
   with_items:
-    - { name: 'vm.swappiness', value: 1 }
+    - { name: 'vm.swappiness', value: 0 }
     - { name: 'net.core.rmem_max', value: 16777216 }
     - { name: 'net.core.wmem_max', value: 16777216 }
     - { name: 'net.ipv4.ip_local_port_range', value: '1024 65023' }
